@@ -1,0 +1,8 @@
+{
+    "/dlg-mta-api/*": {
+        "target": "https://dev-amends-dlgdashboard.dlgdigitalservices.com",
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug"
+    }
+}
