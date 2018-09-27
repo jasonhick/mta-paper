@@ -1,8 +1,8 @@
 {
-    "/dlg-mta-api/*": {
-        "target": "https://dev-amends-dlgdashboard.dlgdigitalservices.com",
-        "secure": false,
-        "changeOrigin": true,
-        "logLevel": "debug"
-    }
+  "/api": {
+    "target": "https://fakerestapi.azurewebsites.net",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
 }

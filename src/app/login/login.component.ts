@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
-import { Login } from '../../components/auth-form/login.interface';
-import { AuthenticationService } from '../../services/authentication/authentication.service';
+import { Login } from '../components/auth-form/login.interface';
+import { AuthenticationService } from '../_services';
 
 @Component({
   selector: 'app-login',

@@ -1,26 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Router, Routes, RouterModule, NavigationStart } from '@angular/router';
+
 import { AppComponent } from './app.component';
-import { LoginComponent } from './views/login/login.component';
-// import { ResetComponent } from './login/reset/reset.component';
-// import { FormDownloadComponent } from './manage/form-download/form-download.component';
-// import { QuoteInputComponent } from './manage/quote-input/quote-input.component';
-// import { AuditingComponent } from './manage/auditing/auditing.component';
-// import { UserAddComponent } from './users/add/add.component';
-// import { UserResetComponent } from './password/reset/reset.component';
-// import { UserListComponent } from './users/list/list.component';
-// import { ErrorComponent } from './error/error.component';
-// import { SessionTimeoutComponent } from './session-timeout/session-timeout.component';
-// import { ManageComponent } from './manage/manage.component';
-// import { LoggedInResolver } from './shared/services/data/logged-in/logged-in.resolve';
-// import { ConfirmPaymentComponent } from './manage/confirm-payment/confirm-payment.component';
-// import { AccessService } from './shared/guards/access/access.service';
+import { HomeComponent } from './home';
+import { LoginComponent } from './login';
 
 const routes: Routes = [
     {
         path: '',
-        redirectTo: 'login',
-        pathMatch: 'full'
+        component: HomeComponent
     },
     {
         path: 'login',
