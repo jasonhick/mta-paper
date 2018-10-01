@@ -1,6 +1,6 @@
 {
-  "/api": {
-    "target": "https://fakerestapi.azurewebsites.net",
+  "/dlg-gateway-routing/*": {
+    "target": "https://mta-ci-dashboard.qa.dlgdigitalapi.com/",
     "secure": false,
     "changeOrigin": true,
     "logLevel": "debug"
