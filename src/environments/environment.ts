@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   api: {
     base: '/dlg-gateway-routing/mta-api/mta',
-    users: '/users'
+    users: '/user/list'
   }
 };
 
