@@ -3,3 +3,4 @@ export * from './alert/alert.service';
 export * from './authentication/authentication.service';
 export * from './initialise/initialise.service';
 export * from './token/token.service';
+export * from './user/user.service';

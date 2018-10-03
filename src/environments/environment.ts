@@ -3,12 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-    production: false,
-    apiUrl: {
-        base: 'https://fakerestapi.azurewebsites.net/api',
-        login: 'Users',
-        logout: 'logout'
-    }
+  production: false,
+  api: {
+    base: '/dlg-gateway-routing/mta-api/mta',
+    users: '/users'
+  }
 };
 
 /*

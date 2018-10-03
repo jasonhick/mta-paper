@@ -4,6 +4,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { CoreModule } from './_core';
+
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing';
 
@@ -12,9 +14,9 @@ import { AuthGuard } from './_guards';
 
 import { HomeComponent } from './home';
 import { LoginComponent } from './login';
+import { UsersComponent } from './users';
 
 import { AuthFormModule } from './components/auth-form/auth-form.module';
-import { MaterialModule } from './_core/material/material.module';
 
 import { XAuthInterceptor } from './_helpers';
 import { InitialiseService } from './_services';
@@ -27,24 +29,24 @@ export function initialiseProviderFactory(initialiseService: InitialiseService) 
 }
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, LoginComponent, AlertComponent],
+  declarations: [AppComponent, HomeComponent, LoginComponent, AlertComponent, UsersComponent],
   imports: [
     AppRoutingModule,
     AuthFormModule,
     BrowserAnimationsModule,
     BrowserModule,
     HttpClientModule,
-    MaterialModule,
+    CoreModule,
     ReactiveFormsModule
   ],
   providers: [
     AuthGuard,
-    {
-      provide: APP_INITIALIZER,
-      useFactory: initialiseProviderFactory,
-      deps: [InitialiseService],
-      multi: true
-    },
+    // {
+    //   provide: APP_INITIALIZER,
+    //   useFactory: initialiseProviderFactory,
+    //   deps: [InitialiseService],
+    //   multi: true
+    // },
     {
       provide: HTTP_INTERCEPTORS,
       useClass: XAuthInterceptor,
