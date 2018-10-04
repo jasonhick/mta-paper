@@ -7,9 +7,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // -----------------------------------------
 // Core Services
 // -----------------------------------------
+import { CoreModule } from './_core';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing';
-import { CoreModule } from './_core';
 import { AlertComponent } from './_directives';
 import { AuthGuard } from './_guards';
 

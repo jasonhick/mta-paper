@@ -1,11 +1,11 @@
 export interface User {
-  creationDateTime?: string;
-  fullname?: string;
-  lastLoginDateTime?: string;
-  password: string;
+  username?: string;
   racf?: string;
   roles?: string[];
+  fullname?: string;
   status?: string;
-  username: string;
+  lastLoginDateTime?: any[];
+  creationDateTime?: any[];
+  password?: string;
   token?: string;
 }

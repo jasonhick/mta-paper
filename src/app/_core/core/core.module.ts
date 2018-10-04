@@ -16,12 +16,12 @@ export function initialiseProviderFactory(initialiseService: InitialiseService) 
   imports: [MaterialModule],
   exports: [MaterialModule],
   providers: [
-    {
-      provide: APP_INITIALIZER,
-      useFactory: initialiseProviderFactory,
-      deps: [InitialiseService],
-      multi: true
-    },
+    // {
+    //   provide: APP_INITIALIZER,
+    //   useFactory: initialiseProviderFactory,
+    //   deps: [InitialiseService],
+    //   multi: true
+    // },
     {
       provide: HTTP_INTERCEPTORS,
       useClass: XAuthInterceptor,
