@@ -58,25 +58,26 @@ const ELEMENT_DATA = [
 export class UsersComponent implements OnInit {
   users: User[] = [];
   displayedColumns: string[] = ['racf', 'fullname', 'username', 'status'];
-  dataSource = new MatTableDataSource(ELEMENT_DATA);
+  dataSource = new MatTableDataSource(this.users);
+
+  constructor(private userService: UserService) {}
 
   @ViewChild(MatSort) sort: MatSort;
 
   // constructor(private userService: UserService) {}
 
   ngOnInit() {
+    this.userService
+      .getAll()
+      .pipe()
+      .subscribe(
+        data => {
+          this.users = data;
+        },
+        error => {
+          console.log('>>> ERROR: ', error);
+        }
+      );
     this.dataSource.sort = this.sort;
-    //   this.userService
-    //     .getAll()
-    //     .pipe()
-    //     .subscribe(
-    //       data => {
-    //         console.log('>>> DATA:', data);
-    //       },
-    //       error => {
-    //         console.log('>>> ERROR: ', error);
-    //       }
-    //     );
-    // }
   }
 }
